@@ -27,14 +27,14 @@ global $language, $dir, $locale;
 <?php menu(_('Contact')); ?>
 <p><?php echo htmlspecialchars(_('You can send me a message here. Don\'t forget to leave a contact option, if you want me to answer.')); ?></p>
 <form action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" method="POST">
-<label><?php echo htmlspecialchars(_('Name:')); ?> <br><input name="name" id="name" size="30" value="<?php
+<label><?php echo htmlspecialchars(_('Name:')); ?> <br><input name="name" id="name" size="25" value="<?php
 echo htmlspecialchars($_POST['name'] ?? '');
 ?>" autofocus></label><br>
 <div <?php echo empty($_POST['subject']) ? 'hidden' : ''; ?>><label><?php echo htmlspecialchars(_('Honeypot (do not fill anything):')); ?> <input type="text" name="subject" value="<?php echo htmlspecialchars($_POST['subject'] ?? ''); ?>"></label><br></div>
-<label><?php echo htmlspecialchars(_('Your email:')); ?> <br><input name="your_email" type="email" size="30" value="<?php
+<label><?php echo htmlspecialchars(_('Your email:')); ?> <br><input name="your_email" type="email" size="25" value="<?php
 echo htmlspecialchars($_POST['your_email'] ?? '');
 ?>"></label><br>
-<label><?php echo htmlspecialchars(_('Subject:')); ?> <br><input name="real_subj" size="30" value="<?php
+<label><?php echo htmlspecialchars(_('Subject:')); ?> <br><input name="real_subj" size="25" value="<?php
 echo htmlspecialchars($_POST['real_subj'] ?? '');
 ?>"></label><br>
 <label><?php echo htmlspecialchars(_('Message:')); ?> <br><textarea name="msg" rows="5" cols="30" required><?php
